@@ -1,0 +1,246 @@
+Answers for Question 1: 
+
+package Sibilla.assignment;
+
+import java.util.Scanner;
+public class Numbers {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter any number");
+        int n = sc.nextInt();
+        if (n % 2 ==0){
+            System.out.println("The number you have entered is even!");
+        }else
+        {
+            System.out.println("The number you have entered is odd!");
+        }
+        
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------
+Answers for Question 2:
+
+package Sibilla.assignment;
+
+import java.util.Scanner;
+public class GradeChecker {
+
+    
+     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter any  grade from A to F : ");
+        String grade = sc.nextLine().toUpperCase();
+        switch (grade){
+            case "A":
+                System.out.println("Excellent!");
+                break;
+                
+            case "B":
+                System.out.println("Great work!");
+                break;
+                
+            case "C":
+                System.out.println("Average");
+                break;     
+            case "D":
+                System.out.println("Pass");
+                break;
+            case "E":
+                System.out.println("you have to elevel up");
+                break;
+            case "F":
+                System.out.println("Fail");
+                break;
+                default:
+                    System.out.println("Invalid");
+                
+        }
+     }
+    }
+-------------------------------------------------------------------------------------------------------------------------
+Answers for question 3:
+
+package Sibilla.assignment;
+
+import java.util.Scanner;
+public class LeapYearChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a year: ");
+        int year = scanner.nextInt();
+        if ((year % 4 ==0 && year % 100 != 0) ||( year % 400 ==0)){
+            System.out.println( "  this is a leap year");
+        }else{
+            System.out.println( "  This is not a leap year ");
+        }
+    
+    
+}
+}
+-------------------------------------------------------------------------------------------------------------------------
+Answers for question 4:
+package Sibilla.assignment;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Sibilla
+ */
+public class ThreeNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+    System.out.println("Enter three numbers: ");
+     int a = scanner.nextInt();
+     int b = scanner.nextInt();
+     int c = scanner.nextInt();
+      
+     if ((a > b) &&(a > c)){
+         System.out.println(" a is the largest number "+a);
+     } else if ((b > a) && (b > c)){
+         System.out.println("the largest number is "+b);
+     } else {
+         System.out.println("The largest is "+c);
+     }
+     
+}
+}
+
+-------------------------------------------------------------------------------------------------------------------------
+Answers for question 5:
+
+package Sibilla.assignment;
+
+import java.util.Scanner;
+
+public class NumberChecker {
+    public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+       System.out.println("Enter any number : ");
+       int num = scanner.nextInt();
+        if ( num > 0 ){
+             System.out.println("The number is positive ");
+        } else if (num < 0 ){
+            System.out.println("The number is negative ");
+        } else if (num == 0){
+            System.out.println("The number is zero");
+        } else {
+            System.out.println("Invalid input");
+        }
+   
+}
+}
+-------------------------------------------------------------------------------------------------------------
+Answers for question 6:
+package Sibilla.assignment;
+
+public class TrianglePattern {
+    public static void main(String[] args){
+        for( int i = 1; i<=7; i++ ){
+        for ( int j = 7; j>0; j--){
+            System.out.println(" ");
+        }
+         for (int k = 1; k <= i; k++ ){
+         System.out.println(k);
+         }
+
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------
+Answers for question 7:
+package Sibilla.assignment;
+
+import java.util.Scanner;
+public class DiamondShape7 {
+
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number of rows : ");
+      int rows = scanner.nextInt();
+      for (int i = 1; i <= rows; i++) {
+        for (int j = 1; j <= rows - i; j++) {
+            System.out.print(" ");
+        }
+        for (int j = 1; j <= 2 * i - 1; j++) {
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+    for (int i = rows - 1; i >= 1; i--) {
+        for (int j = 1; j <= rows - i; j++) {
+            System.out.print(" ");
+        }
+        for (int j = 1; j <= 2 * i - 1; j++) {
+            System.out.print("*");
+        }
+        System.out.println();   
+
+    }
+    
+    }
+    
+}
+
+-------------------------------------------------------------------------------------------------------------
+Answers for question 8:
+
+package Sibilla.assignment;
+
+public class Average {
+    public static void main(String[] args) {
+           
+           int []arr = { 10,12,34,23,56,78};
+           int sum = 0;
+           float Avrg = 0;
+           for( int i=0;i< arr.length;i++){
+                sum = sum + arr[i];
+              Avrg = sum  / arr.length;
+                       }
+           System.out.println(" The average is equal to : "+Avrg);
+           
+           
+           
+   }
+   }
+   ----------------------------------------------------------------------------------------------------------------
+Answer for question 9:
+
+package Sibilla.assignment;
+
+public class ReverseArray {
+    public static void main(String[] args){
+        int arr[] =  {3,4,6,1,9,7,5,8};
+        int i;
+        for(  i = arr.length -1 ; i >= 0; i--){
+         System.out.println(arr[i]+" ");
+    }
+}
+}
+
+
+------------------------------------------------------------------------------------------------------------------
+Answers for question 10:
+
+package Sibilla.assignment;
+
+public class LargestNumber {
+    public static void main(String[] args){
+       int arr[] = {34,23,12,45,67,89,234,26,10,30,43 };
+       int largest = 0;
+       for ( int i=0; i <arr.length;i++){
+           
+           while (arr[i] > largest ){
+            largest = arr[i];
+           }  
+       }
+       System.out.println("The largest number in array is "+largest);
+       }
+    }
+    
+
+
+   
+
